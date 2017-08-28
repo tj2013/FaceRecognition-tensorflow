@@ -4,6 +4,11 @@ import os
 import sys
 import random
 
+if len(sys.argv) > 1:
+    index = int(sys.argv[1])
+else:
+    index = 1
+
 output_dir = './my_faces'
 size = 64
 
@@ -31,9 +36,8 @@ detector = dlib.get_frontal_face_detector()
 # 打开摄像头 参数为输入流，可以为摄像头或视频文件
 camera = cv2.VideoCapture(0)
 
-index = 1
 while True:
-    if (index <= 10000):
+    if (index <= 10000):        
         print('Being processed picture %s' % index)
         # 从摄像头读取照片
         success, img = camera.read()
@@ -65,3 +69,4 @@ while True:
     else:
         print('Finished!')
         break
+
