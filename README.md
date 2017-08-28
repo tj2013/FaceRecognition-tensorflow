@@ -6,6 +6,9 @@
 Need to install opencv, dlib
 
 ## To install dlib
+
 $ brew install cmake
+
 $ brew install boost
+
 $ brew install boost-python --with-python3
